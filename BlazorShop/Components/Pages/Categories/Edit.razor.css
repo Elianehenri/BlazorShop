@@ -1,0 +1,39 @@
+﻿.edit-category-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #73C7AC; /* Cor de fundo do formulário */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .edit-category-container label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .edit-category-container .mb-3 {
+        margin-bottom: 15px;
+    }
+
+    /* Estilo para o botão Atualizar */
+    .edit-category-container .btn-primary {
+        background-color: #007bff; /* Cor do botão primário */
+        color: #fff; /* Cor do texto do botão */
+        border: none;
+    }
+
+        .edit-category-container .btn-primary:hover {
+            background-color: #0056b3; /* Cor do botão ao passar o mouse */
+        }
+
+    /* Estilo para o link Cancelar */
+    .edit-category-container a {
+        margin-top: 15px;
+        display: inline-block;
+        color: #6c757d; /* Cor do texto do link */
+    }
+
+        .edit-category-container a:hover {
+            color: #0056b3; /* Cor do link ao passar o mouse */
+        }

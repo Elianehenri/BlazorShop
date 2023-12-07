@@ -2,30 +2,31 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(to bottom, #cc66ff 0%, #009933 145%);
+    min-height: 100vh;
 }
 
 main {
     flex: 1;
 }
 
-.sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-}
-
-.top-row {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+.ContainerHeader {
+    background: linear-gradient(to bottom, #009999 0%, #003300 100%);
+    border-bottom: 1px solid red;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
     align-items: center;
+    position: fixed;
+    width: 100%;
 }
 
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
+.top-row ::deep a, .top-row ::deep .btn-link {
+    white-space: nowrap;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+}
 
     .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
         text-decoration: underline;
@@ -36,17 +37,29 @@ main {
         text-overflow: ellipsis;
     }
 
-@media (max-width: 640.98px) {
+@media (max-width: 748px) {
+    .ContainerHeader {
+        height: 4rem;
+        justify-content: space-between;
+        /*padding: 0.5rem;*/ /* Adicione um pequeno preenchimento */
+        padding: 4.5rem;
+    }
+
     .top-row {
         justify-content: space-between;
     }
 
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        margin-left: 0;
-    }
+        .top-row ::deep a, .top-row ::deep .btn-link {
+            /* margin-left: 0;*/
+            margin-left: -3px;
+        }
 }
 
-@media (min-width: 641px) {
+@media (min-width:375px) {
+    .ContainerHeader {
+        height: 5rem; /* Ajuste conforme necessário */
+    }
+
     .page {
         flex-direction: row;
     }
@@ -64,11 +77,11 @@ main {
         z-index: 1;
     }
 
-    .top-row.auth ::deep a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
+        .top-row.auth ::deep a:first-child {
+            flex: 1;
+            text-align: right;
+            width: 0;
+        }
 
     .top-row, article {
         padding-left: 2rem !important;

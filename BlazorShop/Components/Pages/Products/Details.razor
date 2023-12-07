@@ -3,6 +3,7 @@
 @inject NavigationManager Navigation
 @rendermode InteractiveServer
 
+<link rel="stylesheet" href="Details.razor.css" />
 
 @if (Model is null)
 {
@@ -13,25 +14,27 @@
 else
 {
     <h1>@Model.Title (@Model.Id)</h1>
-    <EditForm Model="@Model">
+    <div class="edit-form-container">
+        <EditForm Model="@Model">
 
-        <div class="mb-3">
-            <label class="form-label">Nome do produto</label>
-            <InputText @bind-Value="Model.Title" class="form-control" readonly />
-        </div>
+            <div class="mb-3">
+                <label class="form-label">Nome do produto</label>
+                <InputText @bind-Value="Model.Title" class="form-control" readonly />
+            </div>
 
-        <div class="mb-3">
-            <label class="form-label">Preço</label>
-            <InputNumber @bind-Value="Model.Price" class="form-control" readonly />
-        </div>
+            <div class="mb-3">
+                <label class="form-label">Preço</label>
+                <InputNumber @bind-Value="Model.Price" class="form-control" readonly />
+            </div>
 
-        <div class="mb-3">
-            <label class="form-label">Categoria</label>
-            <InputText @bind-Value="Model.Category.Title" class="form-control" readonly />
-        </div>
+            <div class="mb-3">
+                <label class="form-label">Categoria</label>
+                <InputText @bind-Value="Model.Category.Title" class="form-control" readonly />
+            </div>
 
-        <a href="/products">Voltar</a>
-    </EditForm>
+            <a href="/products">Voltar</a>
+        </EditForm>
+    </div>
 }
 
 @code {

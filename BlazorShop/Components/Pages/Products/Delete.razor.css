@@ -1,0 +1,44 @@
+﻿.delete-container {
+    max-width: 600px; /* Ajuste conforme necessário */
+    margin: auto;
+    padding: 20px;
+    background-color: #73C7AC; /* Cor de fundo desejada */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
+
+    /* Estilo para os elementos dentro do componente de exclusão */
+    .delete-container h1 {
+        margin-bottom: 20px;
+    }
+
+    .delete-container label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .delete-container .mb-3 {
+        margin-bottom: 15px;
+    }
+
+    /* Estilo para o botão Excluir */
+    .delete-container .btn-danger {
+        background-color: #dc3545; /* Cor do botão de exclusão */
+        color: #fff; /* Cor do texto do botão */
+        border: none;
+    }
+
+        .delete-container .btn-danger:hover {
+            background-color: #c82333; /* Cor do botão ao passar o mouse */
+        }
+
+    /* Estilo para o link Cancelar */
+    .delete-container a {
+        margin-top: 15px;
+        display: inline-block;
+        color: #007bff; /* Cor do texto do link Cancelar */
+    }
+
+        .delete-container a:hover {
+            color: #0056b3; /* Cor do link ao passar o mouse */
+        }

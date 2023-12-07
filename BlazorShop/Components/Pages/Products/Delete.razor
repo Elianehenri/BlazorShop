@@ -4,6 +4,8 @@
 @rendermode InteractiveServer
 @attribute [Authorize]
 
+<link rel="stylesheet" href="Delete.razor.css" />
+
 @if (Model is null)
 {
     <p class="text-center">
@@ -13,27 +15,31 @@
 else
 {
     <h1>@Model.Title (@Model.Id)</h1>
-    <EditForm Model="@Model" OnValidSubmit="OnValidSubmit">
-        <DataAnnotationsValidator />
-        <ValidationSummary />
 
-        <div class="mb-3">
-            <label class="form-label">Nome do produto</label>
-            <InputText @bind-Value="Model.Title" class="form-control" readonly />
-            <ValidationMessage For="@(() => Model.Title)" />
-        </div>
+    <div class="delete-container">
+        <EditForm Model="@Model" OnValidSubmit="OnValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
 
-        <div class="mb-3">
-            <label class="form-label">Preço</label>
-            <InputNumber @bind-Value="Model.Price" class="form-control" readonly />
-            <ValidationMessage For="@(() => Model.Price)" />
-        </div>
+            <div class="mb-3">
+                <label class="form-label">Nome do produto</label>
+                <InputText @bind-Value="Model.Title" class="form-control" readonly />
+                <ValidationMessage For="@(() => Model.Title)" />
+            </div>
 
-        <button type="submit" class="btn btn-danger">
-            Excluir
-        </button>
-        <a href="/products">Cancelar</a>
-    </EditForm>
+            <div class="mb-3">
+                <label class="form-label">Preço</label>
+                <InputNumber @bind-Value="Model.Price" class="form-control" readonly />
+                <ValidationMessage For="@(() => Model.Price)" />
+            </div>
+
+            <button type="submit" class="btn btn-danger">
+                Excluir
+            </button>
+            &nbsp;&nbsp;
+            <a href="/products">Cancelar</a>
+        </EditForm>
+    </div>
 }
 
 @code {

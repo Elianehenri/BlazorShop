@@ -2,6 +2,8 @@
 @inject ApplicationDbContext Context
 @attribute [StreamRendering(true)]
 
+<link rel="stylesheet" href="Index.razor.css" />
+
 <h1>Categorias</h1>
 <a href="/categories/create" class="btn btn-primary">Nova Categoria</a>
 <br>
@@ -38,18 +40,18 @@ else
                         </a>
                         &nbsp;&nbsp;
 
-                        <AuthorizeView>
+                        @*   <AuthorizeView>
                 @if (context.User.IsInRole("admin"))
                 {
                 <a href="/categories/delete/@category.Id" class="btn btn-danger">
                 Excluir
                 </a>
                 }
-                </AuthorizeView>
+                </AuthorizeView> *@
 
-                     @*    <a href="/categories/delete/@category.Id" class="btn btn-danger">
+                        <a href="/categories/delete/@category.Id" class="btn btn-danger">
                             Excluir
-                        </a> *@
+                        </a>
                     </td>
                 </tr>
             }

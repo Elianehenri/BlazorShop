@@ -2,6 +2,8 @@
 @inject ApplicationDbContext Context
 @rendermode InteractiveServer
 
+<link rel="stylesheet" href="Details.razor.css" />
+
 @if (Model is null)
 {
     <p class="text-center">
@@ -11,15 +13,17 @@
 else
 {
     <h1>@Model.Title (@Model.Id)</h1>
-    <EditForm Model="@Model">
+    <div class="edit-form-container">
+        <EditForm Model="@Model">
 
-        <div class="mb-3">
-            <label class="form-label">Nome da categoria</label>
-            <InputText @bind-Value="Model.Title" class="form-control" readonly />
-        </div>
+            <div class="mb-3">
+                <label class="form-label">Nome da categoria</label>
+                <InputText @bind-Value="Model.Title" class="form-control" readonly />
+            </div>
 
-        <a href="/categories">Voltar</a>
-    </EditForm>
+            <a href="/categories">Voltar</a>
+        </EditForm>
+    </div>
 }
 
 @code {
