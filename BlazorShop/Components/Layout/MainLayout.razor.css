@@ -41,7 +41,6 @@ main {
     .ContainerHeader {
         height: 4rem;
         justify-content: space-between;
-        /*padding: 0.5rem;*/ /* Adicione um pequeno preenchimento */
         padding: 4.5rem;
     }
 
