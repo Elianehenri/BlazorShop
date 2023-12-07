@@ -1,5 +1,5 @@
 ﻿h1 {
-    color: #007bff; /* Cor do texto */
+    color: #1b2229; /* Cor do texto */
 }
 
 /* Estilo para o link "Novo Produto" */
@@ -13,6 +13,51 @@
     }
 
 /* Estilo para a tabela de produtos */
+/*.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #C0E5C3;*/ /* Cor de fundo da tabela */
+/*}*/
+
+    /* Estilo para as células da tabela */
+    /*.table th,
+    ..table td {
+        padding: 10px;
+        border: 1px solid #dee2e6;*/ /* Cor da borda da célula */
+    /*}*/
+
+    /* Estilo para as células do cabeçalho da tabela */
+    /*.table th {
+        background-color: #73C7AC;*/ /* Cor de fundo do cabeçalho da tabela */
+    /*}*/
+
+    /* Estilo para os links de produtos na tabela */
+    /*.table a href {
+        text-decoration: none;
+    }
+
+    .table a:hover {
+        text-decoration: underline;*/ /* Sublinhado ao passar o mouse */
+    /*}*/
+
+/* Estilo para os botões "Editar" e "Excluir" na tabela */
+/*.btn-primary,
+.btn-danger {
+    padding: 5px 10px;
+    margin-right: 5px;
+    color: #fff;*/ /* Cor do texto do botão */
+/*}
+
+.btn-danger {
+    background-color: #dc3545;*/ /* Cor de fundo do botão Excluir */
+/*}
+
+    .btn-danger:hover {
+        background-color: #c82333;*/ /* Cor do botão Excluir ao passar o mouse */
+    /*}*/
+
+/* Estilo para a tabela de produtos */
 .table {
     width: 100%;
     margin-top: 20px;
@@ -22,7 +67,7 @@
 
     /* Estilo para as células da tabela */
     .table th,
-    ..table td {
+    .table td {
         padding: 10px;
         border: 1px solid #dee2e6; /* Cor da borda da célula */
     }
@@ -33,13 +78,13 @@
     }
 
     /* Estilo para os links de produtos na tabela */
-    .table a href {
+    .table a {
         text-decoration: none;
     }
 
-    .table a:hover {
-        text-decoration: underline; /* Sublinhado ao passar o mouse */
-    }
+        .table a:hover {
+            text-decoration: underline; /* Sublinhado ao passar o mouse */
+        }
 
 /* Estilo para os botões "Editar" e "Excluir" na tabela */
 .btn-primary,
@@ -56,3 +101,16 @@
     .btn-danger:hover {
         background-color: #c82333; /* Cor do botão Excluir ao passar o mouse */
     }
+
+/* Mídia query para dispositivos móveis */
+@media (max-width: 768px) {
+    .table th,
+    .table td {
+        font-size: 12px; /* Reduzir o tamanho da fonte para dispositivos móveis */
+    }
+
+    .btn-primary,
+    .btn-danger {
+        font-size: 12px; /* Reduzir o tamanho da fonte dos botões para dispositivos móveis */
+    }
+}
